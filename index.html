@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-1LbfeC+hcO8y0+NKNciDDO4UR4zR9vF8O4pAG6cw5L6RRS2AwBnuvx6Yqz1UB+CxgMMMeQ9JZq3gqXTKFmtyrA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="text-center">Administrator</h1>
+
+        <button type="button" class="btn btn-primary btn-add" data-toggle="modal" data-target="#addFileModal"><i
+                class="fas fa-plus"></i> Adicionar arquivo</button>
+
+        <div class="modal fade" id="addFileModal" tabindex="-1" role="dialog" aria-labelledby="addFileModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addFileModalLabel">Adicionar arquivo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="file-name">Nome do arquivo:</label>
+                                <input type="text" class="form-control" id="file-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="file-type">Tipo de arquivo:</label>
+                                <select class="form-control" id="file-type">
+                                    <option value="video">Vídeo</option>
+                                    <option value="atividade">Atividade</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="file">Arquivo:</label>
+                                <input type="file" class="form-control-file" id="file" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-primary">Adicionar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome do arquivo</th>
+                        <th>Data de envio</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Atividade 1</td>
+                        <td>19/04/2023</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-download"></i></a>
+                            <button type="button" class="btn btn-sm btn-outline-danger"><i
+                                    class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Video aula 1</td>
+                        <td>18/04/2023</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-download"></i></a>
+                            <button type="button" class="btn btn-sm btn-outline-danger"><i
+                                    class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
